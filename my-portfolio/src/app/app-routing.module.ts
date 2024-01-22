@@ -10,14 +10,14 @@ import { ServicesComponent } from './services/services.component';
 
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'resume', component: ResumeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // Set as the default route
-  { path: 'services', component: ServicesComponent },
-];
+    { path: '', component: HomeComponent },
+    { path: 'about', component: AboutComponent },
+    { path: 'projects', component: ProjectsComponent },
+    { path: 'resume', component: ResumeComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'services', component: ServicesComponent },
+    { path: '**', redirectTo: '' } // Redirect to home if the route doesn't match
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
